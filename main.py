@@ -33,4 +33,4 @@ async def on_message(message):
         memes = redditMemes("best")
         await message.channel.send(memes)
 
-client.run('NzcwNTg2NTgwNzI5MjAwNjgw.X5furQ.loybiSIUwbxl13x1-mejkHDIv78')
+client.run('NzcwNTg2NTgwNzI5MjAwNjgw.X5furQ.smTytMUFagjAzbMuOpWrrIE_jag')

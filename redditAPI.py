@@ -18,7 +18,7 @@ def redditMemes(type):
             return submission.url
 
     if type == "best":
-        best = subreddit.best()
+        best = subreddit.hot()
 
         for submission in best:
             return submission.url
