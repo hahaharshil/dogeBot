@@ -1,6 +1,7 @@
 import discord
 import asyncio
 from redditAPI import redditMemes
+from redditAPI import cursedImages
 import praw
 
 
@@ -23,6 +24,8 @@ async def on_message(message):
     if message.content.startswith("yo"):
         await message.channel.send("yo?")
 
+    print(message.content.startswith)
+
 
 
 #reddit
@@ -33,4 +36,8 @@ async def on_message(message):
         memes = redditMemes("best")
         await message.channel.send(memes)
 
-client.run('NzcwNTg2NTgwNzI5MjAwNjgw.X5furQ.smTytMUFagjAzbMuOpWrrIE_jag')
+    if message.content.startswith("cursed images"):
+        cursedImage = cursedImages()
+        await message.channel.send(cursedImage)
+
+client.run('NzcwNTg2NTgwNzI5MjAwNjgw.X5furQ.1X6RVwfkndymk3d-ZZKhzD1g0l4')
