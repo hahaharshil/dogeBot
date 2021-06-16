@@ -36,7 +36,5 @@ def cursedImages():
 
     best = subreddit.hot()
 
-    if not subreddit.is_self:  # We only want to work with link posts
-        slink = subreddit.url
-
-    return slink 
+    for submission in best:
+        return submission.url
