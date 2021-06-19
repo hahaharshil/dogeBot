@@ -12,6 +12,5 @@ def getMessage(message):
         index = random.randint(0, len(messages) - 1)
         if len(messages) == 1:
             index = 0
-        print(messages[index])
         return messages[index]
     return None

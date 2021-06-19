@@ -1,5 +1,4 @@
-from redditAPI import redditMemes, cursedImages
-
+from redditAPI import redditMemes
 commonGreetings = {
     'hello': {'showAll': False, 'data': ['helloooo!!', 'nice to see you', 'hey! how are you today? ']},
     'help': {'showAll': True, 'data': ['Under development']},
@@ -15,20 +14,14 @@ commonGreetings = {
     'tell me a fact': {'showAll': False, 'data': ['Under development']},
     'Is illuminati real?': {'showAll': False, 'data': ['Yes!']},
     'send me a cursed photo': {'showAll': False, 'data': ['Under development']},
-    'what is your favorite tv show?': {'showAll': False,
+    'what is your favourite tv show?': {'showAll': False,
                                        'data': ['I dont mind watching anything. Just want good company.']},
-    'Am I a joke to you?': {'showAll': False, 'data': ['I mean you"re a joke to everyone']},
+    'Am I a joke to you?': {'showAll': False, 'data': ["I mean you're a joke to everyone"]},
     'who do you work for?': {'showAll': False,
                              'data': ['idk never heard of you', 'you"re some cool brat: ', 'A mistake! I see.']},
-    'let"s have fun': {'showAll': False,
+    "let's have fun": {'showAll': False,
                        'data': ['I am busy', "Let's go to mc Donald's", 'You tell me a joke', 'Like?']},
     'You are so annoying': {'showAll': False, 'data': ['I know ']},
-    'what is the time?': {'showAll': False, 'data': ['Developing ']},
-    'dogeBot': {'showAll': False, 'data': ['Developing ']},
-    'memes': {'showAll': False, 'useFunc': True, 'func': redditMemes,'param' : 'new', 'data': ['Developing ']},
-    'cursed memes': {'showAll': False, 'useFunc': True, 'func': cursedImages, 'param': 'new', 'data': ['Developing ']},
-
-}
-sampleData = [
-    {'intent': 'happy', 'responses': []}
-]
+    'what is the time?': {'showAll': False, 'data': ["That's a clock right there, huh"]},
+    'dogeBot': {'showAll': False, 'data': ["Yep that's me "]},
+    'memes': {'showAll': False, 'useFunc': True, 'func': redditMemes,'param' : 'new', 'data': ['Developing ']}}
