@@ -36,6 +36,9 @@ def cursedImages():
 
     for submission in best:
         return submission.url
+<<<<<<< HEAD
     return best.url
 
 
+=======
+>>>>>>> 44dcb6f3fff928629135ebb98d253452cb12531e
