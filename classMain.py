@@ -13,9 +13,10 @@ class Bot(discord.Client):
             return
         if message.content.startswith('hello'):
             await message.channel.send('Hello!')
-        if message.content.startswith("yo"):
-            await message.channel.send("yo?")
+        # if message.content.startswith("yo"):
+        #     await message.channel.send("yo?")
         response = getMessage(message.content)
+        print(response)
         if response is not None:
             await message.channel.send(response)
 

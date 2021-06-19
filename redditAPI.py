@@ -1,42 +1,41 @@
 import praw
+import random
 
 
-def redditMemes(type):
-    reddit = praw.Reddit(client_id = "zCoycm00P_3vKQ",
-                         client_secret = "aHJeLn3Rof7lOq-r0rWdUUVKY6Y57Q",
-                         username = "hahaharshil",
-                         password = "",
-                         user_agent = "sainika")
-
-
+def redditMemes():
+    reddit = praw.Reddit(client_id="zCoycm00P_3vKQ",
+                         client_secret="aHJeLn3Rof7lOq-r0rWdUUVKY6Y57Q",
+                         username="hahaharshil",
+                         password="",
+                         user_agent="sainika")
 
     subreddit = reddit.subreddit("memes")
-    if type == "new":
-        new = subreddit.new()
+    new = subreddit.new()
 
-        for submission in new:
-            return submission.url
+    for submission in new:
+        print(submission.url)
+        return submission.url
 
-    if type == "best":
-        best = subreddit.hot()
+    # if type == "best":
+    #     best = subreddit.hot(limit=65)
+    #     best = list(best)
+    #     random_num = random.randint(0, len(best) - 1)
+    #     return best[random_num].url
 
-        for submission in best:
-            return submission.url
 
 def cursedImages():
-    reddit = praw.Reddit(client_id = "zCoycm00P_3vKQ",
-                         client_secret = "aHJeLn3Rof7lOq-r0rWdUUVKY6Y57Q",
-                         username = "hahaharshil",
-                         password = "",
-                         user_agent = "sainika")
+    reddit = praw.Reddit(client_id="zCoycm00P_3vKQ",
+                         client_secret="aHJeLn3Rof7lOq-r0rWdUUVKY6Y57Q",
+                         username="hahaharshil",
+                         password="",
+                         user_agent="sainika")
 
-
-
-    subreddit = reddit.subreddit("cursedimage")
+    subreddit = reddit.subreddit("cursedcomments")
 
     best = subreddit.hot()
 
-    if not subreddit.is_self:  # We only want to work with link posts
-        slink = subreddit.url
+    for submission in best:
+        return submission.url
+    return best.url
 
-    return slink 
+
