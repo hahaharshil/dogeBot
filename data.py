@@ -20,7 +20,7 @@ commonGreetings = {
     'Am I a joke to you?': {'showAll': False, 'data': ['I mean you"re a joke to everyone']},
     'who do you work for?': {'showAll': False,
                              'data': ['idk never heard of you', 'you"re some cool brat: ', 'A mistake! I see.']},
-    'let"s have fun': {'showAll': False,
+    'let\'s have fun': {'showAll': False,
                        'data': ['I am busy', "Let's go to mc Donald's", 'You tell me a joke', 'Like?']},
     'You are so annoying': {'showAll': False, 'data': ['I know ']},
     'what is the time?': {'showAll': False, 'data': ['Developing ']},

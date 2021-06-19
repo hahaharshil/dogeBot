@@ -1,5 +1,6 @@
 import discord
 from message import getMessage
+
 client = discord.Client()
 
 
@@ -9,14 +10,9 @@ class Bot(discord.Client):
         print(f'We have logged in as {client}')
 
     async def on_message(self, message):
-        if message.author == client.user:
+        if message.author == self.user:
             return
-        if message.content.startswith('hello'):
-            await message.channel.send('Hello!')
-        # if message.content.startswith("yo"):
-        #     await message.channel.send("yo?")
         response = getMessage(message.content)
-        print(response)
         if response is not None:
             await message.channel.send(response)
 
