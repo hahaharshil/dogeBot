@@ -23,11 +23,27 @@ def latest_albums():
         'type',
         'external_urls',
     ]
-    limit = 20
+    limit = 40
     result = sp.new_releases('IN', limit)
     albums = []
     for i in result['albums']['items']:
         albums.append({j: i[j] if j != 'external_urls' else i[j]['spotify'] for j in imp})
     rand = random.randint(0, limit - 1)
     return albums[rand]['external_urls']
+
+
+def featured_playlists():
+    """Return featured playlists
+    Returns:
+    featured playlists
+    """
+    limit = 40
+    result = sp.featured_playlists(limit=limit)
+    playlists = result['playlists']
+    final_playlists = [] # Playlists with filtered data
+    for i in playlists['items']:
+        final_playlists.append({'desc' : i['description'],'external_urls' : i['external_urls']['spotify']})
+    rand = random.randint(0, playlists['total'] - 1)
+    playlist = final_playlists[rand]
+    return f"{playlist['desc']}\n{playlist['external_urls']}"
 
