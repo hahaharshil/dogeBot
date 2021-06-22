@@ -1,4 +1,5 @@
 from redditAPI import redditMemes, cursedImages
+from spotify import latest_albums
 
 commonGreetings = {
     'hello': {'showAll': False, 'data': ['helloooo!!', 'nice to see you', 'hey! how are you today? ']},
@@ -27,7 +28,7 @@ commonGreetings = {
     'dogeBot': {'showAll': False, 'data': ['Developing ']},
     'memes': {'showAll': False, 'useFunc': True, 'func': redditMemes,'param' : 'new', 'data': ['Developing ']},
     'cursed memes': {'showAll': False, 'useFunc': True, 'func': cursedImages, 'param': 'new', 'data': ['Developing ']},
-
+    'albums': {'showAll': False, 'useFunc': True, 'func': latest_albums, 'param': 'new', 'data': ['Developing ']},
 }
 sampleData = [
     {'intent': 'happy', 'responses': []}
