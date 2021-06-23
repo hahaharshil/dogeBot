@@ -1,26 +1,26 @@
 from imdb import IMDb
+
 ia = IMDb()
 
 
+class IMDB:
+    def IMDBmovies(name):
+        movies = ia.search_movie(name)
+        title = (movies[0]["title"])
+        year = (movies[0]["year"])
 
+        id = (movies[0].movieID)
 
-def IMDBmovies(name):
-    movies = ia.search_movie(name)
-    title = (movies[0]["title"])
-    year = (movies[0]["year"])
+        movie = ia.get_movie(id)
+        rating = movie.data["rating"]
 
-    id = (movies[0].movieID)
+        for x in movie['genres']:
+            genre = x
 
-    movie = ia.get_movie(id)
-    rating = movie.data["rating"]
-  
-    for x in movie['genres']:
-        genre = x
-
-
-
-    return title, year, rating, genre
-
-    
-
-
+        return f"""
+        Title :{title}
+        Release year : {year}
+        IMDB Rating : {rating}
+        Genre : {"/".join(movie["genres"])}
+        
+        """

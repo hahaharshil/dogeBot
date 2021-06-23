@@ -6,15 +6,11 @@ client = discord.Client()
 class Bot(discord.Client):
 
     async def on_ready(self):
-        print(f'We have logged in as {client}')
+        print(f"We have logged in as {self.user}")
 
     async def on_message(self, message):
-        if message.author == client.user:
+        if message.author == self.user:
             return
-        if message.content.startswith('hello'):
-            await message.channel.send('Hello!')
-        # if message.content.startswith("yo"):
-        #     await message.channel.send("yo?")
         response = getMessage(message.content)
         print(response)
         if response is not None:

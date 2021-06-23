@@ -1,4 +1,3 @@
-from redditAPI import redditMemes, cursedImages
 
 commonGreetings = {
     'hello': {'showAll': False, 'data': ['helloooo!!', 'nice to see you', 'hey! how are you today? ']},
@@ -25,9 +24,6 @@ commonGreetings = {
     'You are so annoying': {'showAll': False, 'data': ['I know ']},
     'what is the time?': {'showAll': False, 'data': ['Developing ']},
     'dogeBot': {'showAll': False, 'data': ['Developing ']},
-    'memes': {'showAll': False, 'useFunc': True, 'func': redditMemes,'param' : 'new', 'data': ['Developing ']},
-    'cursed memes': {'showAll': False, 'useFunc': True, 'func': cursedImages, 'param': 'new', 'data': ['Developing ']},
-
 }
 sampleData = [
     {'intent': 'happy', 'responses': []}
