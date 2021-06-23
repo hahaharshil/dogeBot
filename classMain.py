@@ -1,5 +1,6 @@
 import discord
 from message import getMessage
+
 client = discord.Client()
 
 
