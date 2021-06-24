@@ -1,4 +1,3 @@
-from redditAPI import redditMemes
 commonGreetings = {
     'hello': {'showAll': False, 'data': ['helloooo!!', 'nice to see you', 'hey! how are you today? ']},
     'help': {'showAll': True, 'data': ['Under development']},
@@ -22,6 +21,9 @@ commonGreetings = {
     "let's have fun": {'showAll': False,
                        'data': ['I am busy', "Let's go to mc Donald's", 'You tell me a joke', 'Like?']},
     'You are so annoying': {'showAll': False, 'data': ['I know ']},
-    'what is the time?': {'showAll': False, 'data': ["That's a clock right there, huh"]},
-    'dogeBot': {'showAll': False, 'data': ["Yep that's me "]},
-    'memes': {'showAll': False, 'useFunc': True, 'func': redditMemes,'param' : 'new', 'data': ['Developing ']}}
+    'what is the time?': {'showAll': False, 'data': ['Developing ']},
+    'dogeBot': {'showAll': False, 'data': ['Developing ']},
+}
+sampleData = [
+    {'intent': 'happy', 'responses': []}
+]
