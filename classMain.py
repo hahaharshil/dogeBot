@@ -1,4 +1,5 @@
 import discord
+
 from message import resp
 
 client = discord.Client()
@@ -17,10 +18,9 @@ class Bot(discord.Client):
             user_mess = message.content
             split_mess1 = user_mess.split()
 
-
             if split_mess1[0] == "doge":
 
-                messages = resp(user_mess)
+                messages = await resp(user_mess)
                 if messages is not None:
                     await message.channel.send(messages)
 

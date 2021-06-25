@@ -1,9 +1,10 @@
-from staticMessages import commonGreetings, getMessage
 from moviesAPI import IMDBmovies
 from musicAPI import spotify
 from redditAPI import Reddit
+from staticMessages import getMessage
 
-def resp(mess):
+
+async def resp(mess):
     split_mess = mess.split()
 
     response = getMessage(input)
@@ -13,7 +14,7 @@ def resp(mess):
 
     elif mess == "doge show memes":
         reddit = Reddit()
-        url = reddit.redditMemes()
+        url = await reddit.redditMemes()
         return url
 
 
@@ -29,7 +30,6 @@ def resp(mess):
                 movie_list.append(split_mess[i])
 
             movie_name = (" ".join(movie_list))
-            
 
             movie_search = IMDBmovies(movie_name)
 
@@ -37,8 +37,10 @@ def resp(mess):
 
     elif mess.startswith("doge music latest"):
         client = spotify()
-
         return client.latest_albums()
+    elif mess.startswith("doge playlist"):
+        client = spotify()
+        return client.featured_playlists()
 
     else:
         return None

@@ -11,11 +11,12 @@ class Reddit:
                                   password="",
                                   user_agent="sainika")
 
-    def redditMemes(self):
-        subreddit = self.reddit.subreddit("memes")
-        new = subreddit.new()
+    async def redditMemes(self):
+        try:
+            subreddit = self.reddit.subreddit("memes")
+            new = await subreddit.new()
 
-        for submission in new:
-            return submission.url
-
-
+            for submission in new:
+                return submission.url
+        except Exception:
+            pass
