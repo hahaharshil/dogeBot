@@ -1,3 +1,5 @@
+import random
+
 commonGreetings = {
     'doge hello': {'showAll': False, 'data': ['helloooo!!', 'nice to see you', 'hey! how are you today?']},
     'doge help': {'showAll': True, 'data': ['Under development']},
@@ -23,3 +25,13 @@ commonGreetings = {
     'doge You are so annoying': {'showAll': False, 'data': ['I know ']},
     'doge what is the time?': {'showAll': False, 'data': ['Developing ']},
 }
+
+def getMessage(message):
+    if message in commonGreetings.keys():
+        msg = commonGreetings[message]
+        messages = commonGreetings[message]['data']
+        index = random.randint(0, len(messages) - 1)
+        if len(messages) == 1:
+            index = 0
+        return messages[index]
+    return None

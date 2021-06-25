@@ -5,23 +5,26 @@ ia = IMDb()
 
 
 def IMDBmovies(name):
-    movies = ia.search_movie(name)
-    title = (movies[0]["title"])
-    year = (movies[0]["year"])
+    try:
+        movies = ia.search_movie(name)
+        title = (movies[0]["title"])
+        year = (movies[0]["year"])
 
-    id = (movies[0].movieID)
+        id = (movies[0].movieID)
 
-    movie = ia.get_movie(id)
-    rating = movie.data["rating"]
+        movie = ia.get_movie(id)
+        rating = movie.data["rating"]
 
-    for x in movie['genres']:
-        genre = x
+        for x in movie['genres']:
+            genre = x
 
-    return f"""
-...
-Title :{title}
-Release year : {year}
-IMDB Rating : {rating}
-Genre : {"/".join(movie["genres"])}
+        return f"""
+    ...
+    Title :{title}
+    Release year : {year}
+    IMDB Rating : {rating}
+    Genre : {"/".join(movie["genres"])}
 
-    """
+        """
+    except IndexError:
+        return("Sahi movie bata na madarchod")

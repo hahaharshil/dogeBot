@@ -1,14 +1,44 @@
-import random
+from staticMessages import commonGreetings, getMessage
+from moviesAPI import IMDBmovies
+from musicAPI import spotify
+from redditAPI import Reddit
 
-from data import commonGreetings
+def resp(mess):
+    split_mess = mess.split()
+
+    response = getMessage(input)
+
+    if response is not None:
+        return response
+
+    elif mess == "doge show memes":
+        reddit = Reddit()
+        url = reddit.redditMemes()
+        return url
 
 
-def getMessage(message):
-    if message in commonGreetings.keys():
-        msg = commonGreetings[message]
-        messages = commonGreetings[message]['data']
-        index = random.randint(0, len(messages) - 1)
-        if len(messages) == 1:
-            index = 0
-        return messages[index]
-    return None
+    elif mess.startswith("doge movie"):
+        lenth = len(split_mess)
+        if lenth <= 2:
+
+            return "Name the movie please"
+
+        else:
+            movie_list = []
+            for i in range(2, lenth):
+                movie_list.append(split_mess[i])
+
+            movie_name = (" ".join(movie_list))
+            
+
+            movie_search = IMDBmovies(movie_name)
+
+            return movie_search
+
+    elif mess.startswith("doge music latest"):
+        client = spotify()
+
+        return client.latest_albums()
+
+    else:
+        return None
