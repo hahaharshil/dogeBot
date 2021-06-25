@@ -2,7 +2,7 @@ import praw
 
 
 
-class reddit:
+class Reddit:
 
     def __init__(self):
         self.reddit = praw.Reddit(client_id="zCoycm00P_3vKQ",
@@ -16,5 +16,6 @@ class reddit:
         new = subreddit.new()
 
         for submission in new:
-            print(submission.url)
             return submission.url
+
+
