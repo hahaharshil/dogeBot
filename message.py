@@ -7,7 +7,7 @@ from staticMessages import getMessage
 async def resp(mess):
     split_mess = mess.split()
 
-    response = getMessage(input)
+    response = getMessage(mess)
 
     if response is not None:
         return response

@@ -12,7 +12,7 @@ class Bot(discord.Client):
     async def on_message(self, message):
 
         if message.author == self.user:
-            return
+            return 
 
         else:
             user_mess = message.content
@@ -33,3 +33,5 @@ class Bot(discord.Client):
 if __name__ == "__main__":
     bot = Bot()
     bot.run('NzcwNTg2NTgwNzI5MjAwNjgw.X5furQ.1X6RVwfkndymk3d-ZZKhzD1g0l4')
+
+

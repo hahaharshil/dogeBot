@@ -1,5 +1,6 @@
 import random
 
+
 commonGreetings = {
     'doge hello': {'showAll': False, 'data': ['helloooo!!', 'nice to see you', 'hey! how are you today?']},
     'doge help': {'showAll': True, 'data': ['Under development']},
