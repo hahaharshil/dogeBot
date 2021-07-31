@@ -1,4 +1,4 @@
-dogeBot is a open source and barebone discord bot which allows anyone to use it however.
+A barebone discord bot which has endless possibilities of customization and can be used however.
 
 Anyone can add this to there discord servers and make it the way they want.
 
