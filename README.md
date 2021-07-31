@@ -4,6 +4,7 @@ Anyone can add this to there discord servers and make it the way they want.
 
 HOW TO USE:
   Before you clone:
+  
      1) Register a discord bot at Discord developers portal (https://discord.com/developer).
      You can have a look at this video by Engineer man on how to register a discord app (https://www.youtube.com/watch?v=UX-aMm6EHVo)
 
@@ -23,6 +24,7 @@ HOW TO USE:
   To do that you need to write (git clone https://github.com/hahaharshil/dogeBot) in your terminal.
 
   After you clone:
+  
     1) Now you need to install all the pip packages in you in the host computer, instructions of which are given below:
 
       1) cd in the dogeBot folder. ($cd dogeBot)
@@ -41,19 +43,21 @@ HOW TO USE:
 
 
 COMMANDS:
+
       1) Static messages: staticMessages.py has all the messages that the bot will reply to.
       2)Reddit messages: If you write (doge show memes) it will.
       3)IMDB ratings messages: Write (doge movie <movie name>) then it will give you rating and some derails of the movies.
-      4)Spotify message: Write (doge music latest) and it will give you names of some latest Spotify music. If you write (doge playlist) it will           give you a playlist suggestion.
+      4)Spotify message: Write (doge music latest) and it will give you names of some latest Spotify music. If you write (doge playlist) it will give you a playlist suggestion.
 
 
 UNDERSTANDING THE FILES:
-  1) classMain.py is a main file which finally send the messages.
-  2) message.py is a file responsible for all the message and response give by the bot.
-  3) staticMessages.py is a file responsible for all the hard coded messages.
-  4)redditAPI.py is a file which is responsible for responses related to reddit. This can be edited the way you desire and functions can be edited, but for now we have r/meme by default, because why not :P.
-  5)musicAPI.py is a file responsible for all the responses related to Spotify and can be edited as you want it.
-  6)moviesAPI.py is responsible for responses related to IMDB.
+
+    1) classMain.py is a main file which finally send the messages.
+    2) message.py is a file responsible for all the message and response give by the bot.
+    3) staticMessages.py is a file responsible for all the hard coded messages.
+    4)redditAPI.py is a file which is responsible for responses related to reddit. This can be edited the way you desire and functions can be edited, but for now we have r/meme by default, because why not :P.
+    5)musicAPI.py is a file responsible for all the responses related to Spotify and can be edited as you want it.
+    6)moviesAPI.py is responsible for responses related to IMDB.
 
 
 AND YES IT'S NOT Dogebot, IT'S dogeBot.
