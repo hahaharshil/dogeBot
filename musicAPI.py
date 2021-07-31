@@ -6,8 +6,9 @@ from spotipy import oauth2
 
 class spotify:
     def __init__(self):
-        token = oauth2.SpotifyClientCredentials(client_id="775486322f724a04bd149178b80f42fd",
-                                                     client_secret="4dd2ebb6e15f43948440fa77fa77f9f1")
+        #Enter you delails
+        token = oauth2.SpotifyClientCredentials(client_id="Your client id",
+                                                     client_secret="Your cliend secret")
         cache_token = token.get_access_token(as_dict=False)
         self.sp = spotipy.Spotify(cache_token)
 
