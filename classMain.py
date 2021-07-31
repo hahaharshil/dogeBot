@@ -32,6 +32,7 @@ class Bot(discord.Client):
 
 if __name__ == "__main__":
     bot = Bot()
-    bot.run('NzcwNTg2NTgwNzI5MjAwNjgw.X5furQ.1X6RVwfkndymk3d-ZZKhzD1g0l4')
+    #You need to have you token in here
+    bot.run('YOUR TOKEN')
 
 
