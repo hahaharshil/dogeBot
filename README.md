@@ -41,10 +41,10 @@ HOW TO USE:
 
 
 COMMANDS:
-  1) Static messages: staticMessages.py has all the messages that the bot will reply to.
-  2)Reddit messages: If you write (doge show memes) it will.
-  3)IMDB ratings messages: Write (doge movie <movie name>) then it will give you rating and some derails of the movies.
-  4)Spotify message: Write (doge music latest) and it will give you names of some latest Spotify music. If you write (doge playlist) it will give you a playlist suggestion.
+    1) Static messages: staticMessages.py has all the messages that the bot will reply to.
+    2)Reddit messages: If you write (doge show memes) it will.
+    3)IMDB ratings messages: Write (doge movie <movie name>) then it will give you rating and some derails of the movies.
+    4)Spotify message: Write (doge music latest) and it will give you names of some latest Spotify music. If you write (doge playlist) it will give you a playlist suggestion.
 
 
 UNDERSTANDING THE FILES:
