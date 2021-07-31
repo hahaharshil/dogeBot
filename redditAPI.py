@@ -5,7 +5,7 @@ import praw
 class Reddit:
 
     def __init__(self):
-        #You will have to rejister you bot in reddit.com/prefs/apps and enter all the details.
+        #enter all the details.
         self.reddit = praw.Reddit(client_id="Your client id",
                                   client_secret="Your client secret",
                                   username="your username",

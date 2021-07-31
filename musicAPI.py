@@ -3,7 +3,6 @@ import random
 import spotipy
 from spotipy import oauth2
 
-
 class spotify:
     def __init__(self):
         #Enter you delails

@@ -27,4 +27,4 @@ def IMDBmovies(name):
 
         """
     except IndexError:
-        return("Sahi movie bata na madarchod")
+        return("not a movie bruh...")
