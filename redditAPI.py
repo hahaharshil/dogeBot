@@ -5,11 +5,12 @@ import praw
 class Reddit:
 
     def __init__(self):
-        self.reddit = praw.Reddit(client_id="zCoycm00P_3vKQ",
-                                  client_secret="aHJeLn3Rof7lOq-r0rWdUUVKY6Y57Q",
-                                  username="hahaharshil",
+        #You will have to rejister you bot in reddit.com/prefs/apps and enter all the details.
+        self.reddit = praw.Reddit(client_id="Your client id",
+                                  client_secret="Your client secret",
+                                  username="your username",
                                   password="",
-                                  user_agent="sainika")
+                                  user_agent="user agent name")
 
     async def redditMemes(self):
         try:
